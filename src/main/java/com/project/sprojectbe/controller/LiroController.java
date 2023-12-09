@@ -36,9 +36,9 @@ public class LiroController {
         return ResponseEntity.ok().body(results);
     }
 
-    @PostMapping("/insertLibri")
+    @PostMapping("/insertLibro")
     public ResponseEntity<Libro> insertLibro(@RequestBody LibroDTO libroDTO) {
-        log.info("called POST -> /api/libro/insertLibri");
+        log.info("called POST -> /api/libro/insertLibro");
         return ResponseEntity.ok().body(libroService.save(LibroDTO.buildLibroFromLibroDTO(libroDTO)));
     }
 
